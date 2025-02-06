@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Mulish Bold';
+  src: url('../fonts/Mulish-Bold.eot');
+  src:  url('../fonts/Mulish-Bold.woff') format('woff'), 
+    url('../fonts/Mulish-Bold.ttf') format('truetype'), 
+    url('../fonts/Mulish-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Mulish SemiBold';
+  src: url('../fonts/Mulish-SemiBold.eot');
+  src:  url('../fonts/Mulish-SemiBold.woff') format('woff'), 
+    url('../fonts/Mulish-SemiBold.ttf') format('truetype'), 
+    url('../fonts/Mulish-SemiBold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url('../fonts/Montserrat-Regular.eot');
+  src:  url('../fonts/Montserrat-Regular.woff') format('woff'), 
+    url('../fonts/Montserrat-Regular.ttf') format('truetype'), 
+    url('../fonts/Montserrat-Regular.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url('../fonts/Montserrat-Bold.eot');
+  src:  url('../fonts/Montserrat-Bold.woff') format('woff'), 
+    url('../fonts/Montserrat-Bold.ttf') format('truetype'), 
+    url('../fonts/Montserrat-Bold.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Montserrat Regular';
+  font-size: var(--default-font-size);
+  color: var(--default-font-color);
+  line-height: var(--default-line-height);
+}
+

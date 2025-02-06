@@ -1,1 +1,11 @@
-$red-color: red;
+:root {
+  --red-color: green;
+  --grey-color: #666666;
+  --white-color: #ffffff;
+  --black-color: #171717;
+  --gold-color: #C2AB81;
+
+  --default-font-size: 14px;
+  --default-line-height: 24px;
+  --default-font-color: var(--grey-color);
+}

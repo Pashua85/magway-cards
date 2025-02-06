@@ -1,19 +1,18 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import autoprefixer from 'autoprefixer';
+import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
 
 export default defineConfig({
-  plugins: [],
+  plugins: [
+    // TODO изменить цвет
+    vitePluginFaviconsInject('./src/assets/favicon.svg'),
+  ],
   css: {
     postcss: {
       plugins: [
         autoprefixer(),
       ],
-    },
-    preprocessorOptions: {
-      scss: {
-        additionalData: `@import "./src/styles/variables.scss";`,
-      },
     },
   },
   build: {

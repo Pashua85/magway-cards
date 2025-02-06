@@ -1,11 +1,15 @@
 :root {
   --red-color: green;
   --grey-color: #666666;
+  --grey-1-color: #808080;
+  --grey-2-color: #666666;
   --white-color: #ffffff;
-  --black-color: #171717;
+  --black-1-color: #171717;
+  --black-2-color: #131313;
   --gold-color: #C2AB81;
 
   --default-font-size: 14px;
   --default-line-height: 24px;
-  --default-font-color: var(--grey-color);
+  --default-font-color: var(--white-color);
+  --base-background-color: var(--black-2-color);
 }

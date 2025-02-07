@@ -202,8 +202,8 @@ body {
         color: var(--grey-1-color);
       }
       &:active {
-        color: var(--grey-2-color);
-        -webkit-text-stroke: 1px var(--grey-2-color);
+        color: var(--grey-color);
+        -webkit-text-stroke: 1px var(--grey-color);
       }
     }
 
@@ -416,4 +416,124 @@ body {
   }
 }
 
+.cards-section {
+  padding-top: 134px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 256px;
+
+  @include m.respond(tab-land) {
+    padding-top: 44px;  
+    padding-left: 49px;
+    padding-right: 49px;
+    padding-bottom: 156px;
+  }
+
+  @include m.respond(narrow-tab) {
+    padding-bottom: 100px;
+  }
+
+  @include m.respond(phone) {
+    padding-top: 30px;  
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 43px;
+  }
+
+  &__content {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    outline: 1px solid red;
+  }
+
+  &__header {
+    margin-bottom: 53px;
+    @include m.section-header;
+
+    @include m.respond(tab-port) {
+      margin-bottom: 40px;
+    }
+
+    @include m.respond(phone) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__cards-container {
+    outline: 1px solid green;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+    align-items: stretch;
+
+    @include m.respond(tab-port) {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      grid-gap: 20px;
+    }
+  }
+
+  &__load-wrapper.button__wrapper {
+    margin: 0 auto;
+
+    @include m.respond(phone) {
+      width: 295px;
+    }
+  }
+}
+
+.card {
+  color: var(--grey-color);
+    
+  &__image {
+    display: block;
+    width: 100%;
+  }
+
+  &__content {
+    background-color: var(--white-color);
+    padding: 25px 24px 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__header,
+  &__subtitle {
+    color: var(--black-1-color);
+  }
+
+  &__header {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Mulish Bold';
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__publish-info {
+    font-size: 12px;
+    line-height: 24px;
+
+    &_bold {
+      font-family: 'Montserrat Bold';
+    }
+  }
+
+  &__button {
+    display: block;
+    height: 50px;
+    background-color: var(--black-1-color);
+    text-decoration: none;
+    color: var(--white-color);
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 25px;
+  }
+}
 

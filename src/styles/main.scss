@@ -17,7 +17,6 @@ body {
   position: relative;
   background-color: var(--base-background-color);
   z-index: 20;
-  border-bottom: 1px solid blue;
 
   @include m.respond(tab-land) {
     padding: 30px 50px 20px;
@@ -28,7 +27,7 @@ body {
   }
 
   &__content {
-    max-width: 1720px;
+    max-width: var(--content-max-width);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -334,6 +333,86 @@ body {
   &_with-border {
     box-shadow: inset -5.5px 0 0 0 var(--white-color),
       inset -10.5px 0 0 0 var(--base-background-color); 
+  }
+}
+
+.space-section {
+  aspect-ratio: 1920 / 1033;
+  background: no-repeat center url('../assets/space.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @include m.respond(tab-port) {
+    aspect-ratio: 765 / 907;
+    background: no-repeat center cover url('../assets/space-tab.jpg');
+  }
+
+  @include m.respond(phone) {
+    aspect-ratio: 360 / 495;
+    background: no-repeat center cover url('../assets/space-tab.jpg');
+  }
+
+  &__content-wrapper {
+    background: linear-gradient(#13131300, #131313);
+    height: calc(13 / 24 * 100%);
+    padding: 0 100px;
+
+    @include m.respond(tab-port) {
+      padding: 0 49px;
+    }
+
+    @include m.respond(phone) {
+      padding: 0 15px;
+    }
+  }
+
+  &__content {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    height: 100%;
+    padding-bottom: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 40px;
+    color: var(--white-color);
+
+    @include m.respond(tab-port) {
+      padding-bottom: 76px;
+    }
+
+    @include m.respond(phone) {
+      padding-bottom: 52.31px;
+    }
+  }
+
+  &__header {
+    max-width: 686px;
+    @include m.section-header;
+  }
+
+  &__text {
+    color: rgba(#FFFFFF, 0.79);
+    font-size: 16px;
+
+    @include m.respond(tab-port) {
+      max-width: 450px;
+    }
+
+    @include m.respond(phone) {
+      font-size: 14px;
+      line-height: 21px;
+      max-width: 293px;
+    }
+  }
+
+  &__request-wrapper.button__wrapper {
+    @include m.respond(phone) {
+      width: 228px;
+      height: 46.69px;
+    }
   }
 }
 

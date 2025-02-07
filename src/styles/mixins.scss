@@ -24,3 +24,20 @@
     @media only screen and (max-width: 1800px) { @content };  
   }
 }
+
+@mixin section-header {
+  font-family: 'Montserrat Bold';
+  font-size: 42px;
+  line-height: 51.2px;
+  text-transform: uppercase;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 38px;
+    line-height: 46.32px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+    line-height: 24.38px;
+  }
+}

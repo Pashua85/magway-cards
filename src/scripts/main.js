@@ -1,19 +1,12 @@
 import '../styles/styles'
+import { addHeaderLogic } from './addHeaderLogic'
+import { CardsService } from './cardsService';
 
-addEventListener("DOMContentLoaded", (event) => {
-  const toggle = document.querySelector('#menu-toggle');
-  const navigationWrapper = document.querySelector('.navigation__wrapper');
-  
-  toggle?.addEventListener('click', () => {
-    navigationWrapper?.classList.toggle('navigation__wrapper_open');
-  })
+addHeaderLogic();
 
-  navigationWrapper?.addEventListener('click', (event) => {
-    const targetClasses = Array.from(event.target?.classList ?? []);
-
-    if (['navigation__link'].some((item) => targetClasses.includes(item))) {
-      navigationWrapper?.classList.toggle('navigation__wrapper_open');
-    }
-  })
+const cardService = new CardsService({ 
+  loadButtonSelector: '#load-button', 
+  spinnerContainerSpinner: '.spinner__container',
+  cardsContainerSelector: '.cards-section__cards-container',
+  preloadedCardsAmount: 10,
 });
-

@@ -8,12 +8,6 @@ export default defineConfig({
   plugins: [
     vitePluginFaviconsInject('./src/assets/favicon.svg'),
   ],
-  rollupOptions: {
-    output: {
-      assetFileNames: 'assets/[name][extname]',
-      entryFileNames: '[name].js',
-    }
-  },
   css: {
     postcss: {
       plugins: [

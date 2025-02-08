@@ -4,7 +4,7 @@ import autoprefixer from 'autoprefixer';
 import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
 
 export default defineConfig({
-  base: '/<REPO>/',
+  base: './',
   plugins: [
     // TODO изменить цвет
     vitePluginFaviconsInject('./src/assets/favicon.svg'),

@@ -13,6 +13,10 @@ export const addHeaderLogic = () => {
     
     toggle?.addEventListener('click', () => {
       toggleOpenClasses({ navigationWrapper, background})
+
+      if ( Array.from(navigationWrapper.classList).includes('navigation__wrapper_open')) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     })
 
     background?.addEventListener('click', () => {

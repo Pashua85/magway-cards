@@ -11,9 +11,12 @@
 body {
   background-color: var(--base-background-color);
 
+
   &.body_stop-scrolling {
-    height: 100%;
-    overflow: hidden;
+    @include m.respond(tab-land) {
+      height: 100%;
+      overflow: hidden;
+    }
   }
 }
 

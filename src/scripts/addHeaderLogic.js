@@ -16,7 +16,6 @@ export const addHeaderLogic = () => {
     })
 
     background?.addEventListener('click', () => {
-      console.log('click background');
       toggleOpenClasses({ navigationWrapper, background})
     });
   

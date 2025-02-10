@@ -4,7 +4,7 @@ import autoprefixer from 'autoprefixer';
 import vitePluginFaviconsInject from 'vite-plugin-favicons-inject';
 
 export default defineConfig({
-  base: '/magway-cards',
+  base: '/',
   plugins: [
     vitePluginFaviconsInject('./src/assets/favicon.svg'),
   ],

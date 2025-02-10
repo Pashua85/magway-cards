@@ -50,8 +50,6 @@ export class CardsService {
   } 
 
   async loadCards(limit = 5) {
-    console.log({mode: import.meta.env.MODE})
-
     if (this.loadedCardLength >= this.maxCardsAmount) {
       return;
     }
@@ -126,7 +124,6 @@ export class CardsService {
   createCardElement(post) {
     const card = document.createElement('article');
     card.classList.add('card');
-    console.log({ASSETS_PATH});
 
     const image = document.createElement('img');
     image.classList.add('card__image');

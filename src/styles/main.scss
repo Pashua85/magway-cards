@@ -374,7 +374,7 @@ body {
 }
 
 .space-section {
-  aspect-ratio: 1920 / 1033;
+  aspect-ratio: 1920 / 959.07;
   background: no-repeat center url('../assets/space.jpg');
   background-size: cover;
   display: flex;
@@ -394,14 +394,14 @@ body {
   &__content-wrapper {
     background: linear-gradient(#13131300, #131313);
     height: calc(13 / 24 * 100%);
-    padding: 0 100px;
+    padding: 0 100px 96px;
 
     @include m.respond(tab-port) {
-      padding: 0 49px;
+      padding: 0 49px 76px;
     }
 
     @include m.respond(phone) {
-      padding: 0 15px;
+      padding: 0 15px 52.31px;
     }
   }
 

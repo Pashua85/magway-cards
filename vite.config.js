@@ -21,6 +21,9 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
       },
+      output: {
+        assetFileNames: `assets/[name].[ext]`
+      }
     },
   },
 });

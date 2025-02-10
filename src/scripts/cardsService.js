@@ -1,4 +1,4 @@
-import { BASE_HOST } from "./constants";
+import { BASE_HOST, ASSETS_PATH } from "./constants";
 import { getRandomNumber } from '../helpers/getRandomNumber';
 
 export class CardsService {
@@ -50,12 +50,15 @@ export class CardsService {
   } 
 
   async loadCards(limit = 5) {
+    console.log({mode: import.meta.env.MODE})
+
     if (this.loadedCardLength >= this.maxCardsAmount) {
       return;
     }
 
     try {
       this.openSpinner();
+      this.loadButton.disabled = true;
       const posts = await this.fetchPosts(limit);
       const postsWithUsernames = await this.addUsersToPosts(posts);
       const fragment = document.createDocumentFragment();
@@ -66,6 +69,7 @@ export class CardsService {
       })
 
       this.closeSpinner();
+      this.loadButton.disabled = false;
 
       this.cardsContainer.appendChild(fragment);
 
@@ -76,6 +80,8 @@ export class CardsService {
       }
   
     } catch(err) {
+      this.closeSpinner();
+      this.loadButton.disabled = false;
       console.error('Ошибка получения данных', err);
     }
   }
@@ -120,11 +126,12 @@ export class CardsService {
   createCardElement(post) {
     const card = document.createElement('article');
     card.classList.add('card');
+    console.log({ASSETS_PATH});
 
     const image = document.createElement('img');
     image.classList.add('card__image');
     /** Картинка для карточек устанавливается рандомно из тех, что есть на макете  */
-    image.src = `./src/assets/coin-${getRandomNumber(1,10)}.jpg`;
+    image.src = `${ASSETS_PATH}/coin-${getRandomNumber(1,10)}.jpg`;
     image.alt = 'coin';
     card.appendChild(image);
     

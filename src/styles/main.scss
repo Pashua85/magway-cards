@@ -105,6 +105,8 @@ body {
 
     @include m.respond(narrow-tab) {
       width: 38.41px;
+      position: relative;
+      bottom: 4px;
     }
   }
 
@@ -119,6 +121,8 @@ body {
 
     @include m.respond(narrow-tab) {
       width: 62px;
+      position: relative;
+      bottom: 4px;
     }
   }
 }
@@ -224,11 +228,7 @@ body {
     }
 
     @include m.respond(tab-land) {
-      gap: 12.5px;
-    }
-
-    @include m.respond(narrow-tab) {
-      gap: 6px;
+      gap: 0;
     }
 
     @include m.respond(phone) {
@@ -245,6 +245,8 @@ body {
     @include m.respond(tab-land) {
       height: 60px;
       width: 92.5px;
+      position: relative;
+      left: 8px;
     }
     @include m.respond(narrow-tab) {
       height: 50px;
@@ -265,7 +267,7 @@ body {
     }
     @include m.respond(tab-land) {
       height: 60px;
-      width: 293px;
+      width: 201px;
     }
     @include m.respond(narrow-tab) {
       height: 50px;
